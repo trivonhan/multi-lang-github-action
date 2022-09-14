@@ -19,7 +19,7 @@ on:
   pull_request:
   
 jobs:
-  nodejs_ci:
+  test:
     uses: trivonhan/multi-lang-github-action/.github/workflows/main.yml@master
     with:
       language: 'nodejs'
