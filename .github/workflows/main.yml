@@ -13,15 +13,15 @@ on:
 jobs:
   nodejs_ci:
     if: ${{ inputs.language == 'nodejs' }}
-    uses: trivonhan/github-action-test/.github/workflows/nodejs.yml@master
+    uses: ./.github/workflows/nodejs.yml@master
     with:
       package_manager: ${{ inputs.package_manager }}
   go_ci:
     if: ${{ inputs.language == 'go' }}
-    uses: trivonhan/github-action-test/.github/workflows/go.yml@master    
+    uses: ./.github/workflows/go.yml@master    
   rust_ci: 
     if: ${{ inputs.language == 'rust' }}
-    uses: trivonhan/github-action-test/.github/workflows/rust.yml@master
+    uses: ./.github/workflows/rust.yml@master
   python_ci:
     if: ${{ inputs.language == 'python' }}
-    uses: trivonhan/github-action-test/.github/workflows/python.yml@master
+    uses: ./.github/workflows/python.yml@master
